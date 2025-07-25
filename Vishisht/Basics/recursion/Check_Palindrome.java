@@ -4,14 +4,16 @@ public class Check_Palindrome {
         Scanner sc = new Scanner(System.in);
         System.out.printf("Enter a string : ");
         String str = sc.nextLine();
-        boolean res = check_palindrome(0, str, str.length());
-        if(res){
-            System.out.println("Palindrome");
-        } else {
-            System.out.println("Not a Palindrome");
-        }
+        String cleaned = clean_string(str);
+        boolean res = check_palindrome(0, cleaned, cleaned.length());
+        System.out.println(res);
         sc.close();
         
+    }
+    public static String clean_string(String str) {
+        String newStr = str.toLowerCase();
+        newStr = newStr.replaceAll("[^a-zA-Z0-9]", "");
+        return newStr;
     }
     public static boolean check_palindrome(int i,String s,int size){
         if(i>=size/2){
