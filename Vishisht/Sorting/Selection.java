@@ -18,9 +18,9 @@ public class Selection {
     }
     public static int[] Selection_Sort(int[] array) {
         int size = array.length;
-        for(int i=0;i<size;i++){
+        for(int i=0;i<size-1;i++){
             int min=array[i];
-            for(int j=i;j<size;j++){
+            for(int j=i;j<size-1;j++){
                 if(array[j]<min){
                     min=array[j];
                     array[j]=array[i];
