@@ -17,7 +17,15 @@ public class Find_Second_Largest_Element {
     }
     public static int find_second_largest(int[] array){
         int max = array[0];
-        int secondLargest = array[0];
+        int secondLargest = 0;
+        int j=0;
+        while(j<array.length){
+            if(array[j]<max) {
+                secondLargest=array[j];
+                break;
+            }
+            j++;
+        }
         for(int i=0;i<array.length;i++){
             if(array[i]>max){
                 secondLargest = max;
