@@ -1,4 +1,4 @@
-package Vishisht.Basics.hashing;
+package Basics.hashing;
 
 import java.util.HashMap;
 import java.util.Scanner;

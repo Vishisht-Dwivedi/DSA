@@ -1,4 +1,4 @@
-package Vishisht.Arrays.Easy;
+package Arrays.Easy;
 import java.util.Scanner;
 
 public class Find_Second_Largest_Element {

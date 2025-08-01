@@ -1,8 +1,8 @@
-package Vishisht.Arrays.Easy;
+package Arrays.Easy;
 
 import java.util.Scanner;
 
-public class Find_Largest_Element {
+public class Check_If_Sorted {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.printf("Enter size of array: ");
@@ -12,17 +12,14 @@ public class Find_Largest_Element {
         for(int i=0;i<size;i++){
             array[i] = sc.nextInt();
         }
-        int max = find_largest(array);
-        System.out.printf("Max element: %d",max);
+        boolean isSorted = Check_sorted(array);
+        System.out.printf("Sorted: "+isSorted);
         sc.close();
     }
-    public static int find_largest(int[] array){
-        int max=array[0];
-        for(int i=0;i<array.length;i++){
-            if(array[i]>max){
-                max=array[i];
-            }
+    public static boolean Check_sorted(int[] array) {
+        for(int i=1;i<array.length;i++){
+            if(array[i]<array[i-1]) return false;
         }
-        return max;
+        return true;
     }
 }

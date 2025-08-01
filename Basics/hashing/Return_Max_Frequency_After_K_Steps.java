@@ -1,4 +1,4 @@
-package Vishisht.Basics.hashing;
+package Basics.hashing;
 
 import java.util.ArrayList;
 import java.util.Scanner;
